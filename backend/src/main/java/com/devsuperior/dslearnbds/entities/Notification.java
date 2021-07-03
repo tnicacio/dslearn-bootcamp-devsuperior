@@ -1,5 +1,6 @@
 package com.devsuperior.dslearnbds.entities;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 import javax.persistence.Column;
@@ -13,7 +14,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_notification")
-public class Notification {
+public class Notification implements Serializable {
+	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
